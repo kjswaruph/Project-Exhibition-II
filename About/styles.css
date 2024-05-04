@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styles for the header */
+header {
+    background-color: transparent;
+    padding: 20px;
+    height: 85px;
+    position: absolute; /* Position the header on top of the slideshow */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 2; 
+}
+span{
+    color: rgb(12, 155, 12);
+}
+.logo {
+    float: left;
+}
+
+.nav-list {
+    list-style-type: none;
+    float: right;
+}
+span1{
+    color: rgb(0, 0, 0);
+}
+.nav-list li {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative; /* Add relative positioning */
+}
+
+.nav-list li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 600;
+    position: relative; /* Add relative positioning */
+}
+
+/* Add line styles */
+.nav-list li::after {
+    content: ''; /* Add empty content */
+    position: absolute;
+    bottom: 1px; /* Position the line below the text */
+    left: 0;
+    width: 100%; /* Make the line span the entire width of the parent */
+    height: 5px; /* Set the height of the line */
+    background-color: transparent; /* Set initial background color to transparent */
+    transition: background-color 0.3s ease; /* Add transition effect */
+}
+.nav-list li a:hover {
+    color: rgb(40, 158, 11);
+}
+/* Change line color on hover */
+.nav-list li:hover::after {
+    background-color: rgb(18, 168, 28); /* Change the background color of the line */
+}
+.nav-list li:last-child::after {
+    display: none; /* Hide the line for the last list item (donation button) */
+}
+button {
+    border-radius: 25px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border-color: green;
+    padding: 5px;
+    font-size: 40px;
+    transition: box-shadow 0.3s ease; /* Add transition effect */
+}
+button:hover{
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.container {
+    max-width: 100vw;
+    height: 100%;
+    margin: 0 auto; /* Add padding to create space for the footer */
+    background-color: rgb(203, 203, 203);
+}
+
+
+
+.section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-left: 15px;
+}
+
+/* Photo gallery styles */
+.photo-gallery {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.photo-gallery img {
+    width: 400px;
+    height: 450px;
+    display: inline-block;
+    margin-right: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.05);
+}
+/* Additional styles for photo gallery scrolling */
+/* Additional styles for photo gallery scrolling */
+.photo-gallery-container {
+    overflow: hidden;
+    position: relative;
+    width: calc(100% - 60px); /* Adjusted width to accommodate all images */
+    margin: 0 auto; /* Center the gallery */
+}
+
+.photo-gallery {
+    display: inline-block; /* Display the images in a single line */
+    white-space: nowrap;
+    transition: transform 0.5s ease; /* Add smooth transition effect */
+ /* Set the total width of the gallery */
+}
+
+.photo-gallery img {
+    /* Your existing styles */
+    width: 400px;
+    height: 450px;
+    display: inline-block;
+    margin-right: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+
+/* Styles for footer */
+footer {
+ /* Adjust this value as needed */
+    background-color: rgb(7, 54, 9);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-nav {
+    list-style-type: none;
+}
+
+.footer-nav li {
+    display: inline;
+    margin-left: 20px;
+}
+.pol{
+    color: white;
+}
+.footer-nav li a {
+    color: white;
+    text-decoration: none;
+    font-size: 48px;
+}

@@ -1,16 +1,22 @@
-function searchPlant() {
-    var input, filter, plants, plant, i, txtValue;
-    input = document.getElementById('searchInput');
-    filter = input.value.toUpperCase();
-    plants = document.getElementsByClassName('plant');
-    for (i = 0; i < plants.length; i++) {
-      plant = plants[i];
-      txtValue = plant.innerText || plant.textContent;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        plant.style.display = '';
-      } else {
-        plant.style.display = 'none';
+function scrollToDiv() {
+    var searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    var items = document.getElementsByClassName('plant');
+
+    // Loop through all items
+    for (var i = 0; i < items.length; i++) {
+      var itemName = items[i].querySelector('h2').innerText.toLowerCase();
+      var content = items[i].querySelector('h2').nextElementSibling;
+
+      // Remove highlight from previous searches
+      items[i].classList.remove('highlight');
+
+      if (itemName.includes(searchTerm)) {
+        items[i].classList.add('highlight');
+        items[i].scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setTimeout(function() {
+          items[i].classList.remove('highlight');
+        }, 5000);
+        break; // Stop searching after first match found
       }
     }
   }
-  
